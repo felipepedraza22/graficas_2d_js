@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficas 2D JS</title>
+    <style>
+        #miCanvas{
+            
+            background-color: rgb(75, 196, 233);
+        }
+        #canvas-container 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        window.onload = function ()
+        {
+       
+            var canvas = document.getElementById("miCanvas");
+
+            const BASE = 500; 
+            const ALTURA = 300;
+
+            canvas.width = BASE;
+            canvas.height = ALTURA;
+            if (canvas && canvas.getContext)
+            {
+                var ctx = canvas.getContext("2d");
+                if (ctx)
+                {
+                    ctx.fillStyle = '#999'
+                    ctx.fillRect(200,140,280,100);
+
+                    ctx.font = "2em Verdana";
+                    ctx.lineWidth=1.0;
+                    
+                    ctx.strokeStyle="yellow";
+
+
+                    ctx.fillStyle = 'orange'
+                    ctx.fillRect(190,155,10,60);
+
+                    ctx.fillStyle = 'orange'
+                    ctx.fillRect(160,140,30,90);
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "black"
+                    ctx.strokeStyle = "white"
+                    ctx.arc(335,ALTURA-50,40,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "black"
+                    ctx.arc(450,ALTURA-50,40,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "black"
+                    ctx.strokeStyle = "white"
+                    ctx.arc(220,ALTURA-50,40,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.fillStyle = 'white'
+                    ctx.fillRect(200,250,100,10);
+   
+                    ctx.fillStyle = 'white'
+                    ctx.fillRect(350,250,100,10);
+
+                    ctx.fillStyle = 'orange'
+                    ctx.fillRect(350,40,100,100);
+
+                    ctx.fillStyle = 'white'
+                    ctx.fillRect(360,50,80,80);
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "yellow"
+                    ctx.strokeStyle = "white"
+                    ctx.arc(400,ALTURA-210,40,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "white"
+                    ctx.strokeStyle = "white"
+                    ctx.arc(390,ALTURA-220,10,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "black"
+                    ctx.strokeStyle = "white"
+                    ctx.arc(390,ALTURA-220,5,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "white"
+                    ctx.strokeStyle = "white"
+                    ctx.arc(420,ALTURA-220,10,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "black"
+                    ctx.strokeStyle = "white"
+                    ctx.arc(420,ALTURA-220,5,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "brown"
+                    ctx.strokeStyle = "white"
+                    ctx.arc(405,ALTURA-190,13,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.fillStyle = '#999'
+                    ctx.fillRect(340,20,120,20);
+
+                    ctx.fillStyle = '#999'
+                    ctx.fillRect(345,10,110,20);
+
+                    ctx.fillStyle = 'orange'
+                    ctx.fillRect(220,80,40,60);
+
+                    ctx.fillStyle = 'orange'
+                    ctx.fillRect(210,50,60,30);
+
+                    ctx.font = "2em Verdana";
+                    ctx.lineWidth=1.0;
+                    ctx.fillStyle="blue";
+                    ctx.strokeStyle="yellow";
+
+                    ctx.shadowColor="black"
+                    ctx.shadowOffsetX=5;
+                    ctx.shadowOffsetY=5;
+                    ctx.shadowBlur=10;
+
+                    ctx.fillText("Felipe Pedraza", BASE/2,200);
+
+                    ctx.beginPath()
+                    ctx.fillStyle = "black"
+                    ctx.strokeStyle = "black"
+                    ctx.arc(170,180,30, 0.6*Math.PI,1.4*Math.PI,false);
+                    ctx.fill()
+                    ctx.stroke()                   
+                }         
+                    
+                }
+                   
+                else
+                 {
+                    alert("Error al crear el contexto ");
+                }
+            }
+        
+    </script>
+</head>
+<body>
+    <h1>Graficas 2D con html y JS</h1>
+    <div id="canvas-container">
+        <canvas id="miCanvas" width="500" height="300">
+            Tu navegador no soporta canvas
+        </canvas>
+    </div>

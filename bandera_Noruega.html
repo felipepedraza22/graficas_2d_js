@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficas 2D JS</title>
+    <style>
+        #miCanvas{
+            
+            background-color: rgb(240, 37, 37);
+        }
+    </style>
+    <script>
+        window.onload = function ()
+        {
+            var canvas = document.getElementById("miCanvas");
+            if (canvas && canvas.getContext)
+            {
+                var ctx = canvas.getContext("2d");
+                const BASE = 500;
+                const ALTURA = 300 ;
+                 
+                canvas.width = BASE
+                canvas.height = ALTURA
+                if (ctx){
+
+                    //alert ("Bienvenido a mi canva ")7
+                    //aqui vamos a greficar 
+                    ctx.fillStyle = "RGB(255 255 255)"
+                    ctx.fillRect(0,180,210, 30)
+                    ctx.fillRect(180,0,30,210)
+                    ctx.fillRect(270,0,30,210)
+                    ctx.fillRect(0,270,210,30)
+                    ctx.fillRect(180,270,30,480)
+                    ctx.fillRect(270,180,660,30)
+                    ctx.fillRect(270,270,660,30)
+                    ctx.fillRect(270,270,30,480)
+
+                    ctx. fillStyle = "RGB(0, 0, 255)"
+                    ctx.fillRect(210,0,60,ALTURA)
+                    ctx.fillRect(0,210,BASE,60)
+
+
+
+
+                    
+
+
+                }
+                else {
+                    alert("Errr al crear el contexto ");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Graficas 2D con html y JS</h1>
+    <canvas id="miCanvas" width="1800px" height="1800px">
+        
+        tu navegador no soporta canvas 
+    </canvas>
+    
+</body>
+</html>

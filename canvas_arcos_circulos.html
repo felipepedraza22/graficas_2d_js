@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #miCanvas{
+            border: dotted 5px rgb(102, 255, 0) ;
+            background-color: coral;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+
+            var canvas = document.getElementById("miCanvas")
+
+            const BASE = canvas.width
+
+            const ALTURA = canvas.height
+
+            if(canvas && canvas.getContext){
+
+                var ctx = canvas.getContext("2d")
+
+                if (ctx){
+                    //alert("Bienvenido al canvas")
+                    ctx.fillStyle = "yellowgreen"
+                    ctx.strokeStyle = "green"
+                    ctx.lineWidth = 5
+
+                    ctx.beginPath()
+                    ctx.arc(140,ALTURA/2,50,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.arc(245,ALTURA/2,50,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.arc(348,ALTURA/2,50,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.arc(450,ALTURA/2,50,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.lineWidth=4
+                    ctx.fillStyle = "GRAY"
+                    ctx.strokeStyle = "BLACK"
+                    ctx.arc(122,ALTURA/2,6,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    ctx.beginPath()
+                    ctx.lineWidth=4
+                    ctx.fillStyle = "GRAY"
+                    ctx.strokeStyle = "BLACK"
+                    ctx.arc(140,ALTURA/2,6,0,2*Math.PI, true)
+                    ctx.fill()
+                    ctx.stroke()
+
+                    
+
+                    ctx.fillStyle = "yellow"
+                    ctx.strokeStyle = "black"
+
+                }
+                else{
+
+                    alert("Error al crear el contexto")
+
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Graficas 2D con HTML y Javascript</h1>
+    <div id="canvas-container">
+        <canvas id="miCanvas" width="660px" height="480px">Tu navegador no soporta </canvas>
+    </div> 
+</body>
+</html>
